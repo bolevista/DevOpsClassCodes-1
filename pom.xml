@@ -158,6 +158,17 @@
 		</dependencies>
 
     <build>
+	     <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>cobertura-maven-plugin</artifactId>
+                        <version>${cobertura.version}</version>
+                        <configuration>
+                            <formats>
+                                <format>html</format>
+                                <format>xml</format>
+                            </formats>
+                        </configuration>
+                    </plugin>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -417,18 +428,7 @@
             </build>
             <reporting>
                 <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>cobertura-maven-plugin</artifactId>
-                        <version>${cobertura.version}</version>
-                        <configuration>
-                            <formats>
-                                <format>html</format>
-                                <format>xml</format>
-                            </formats>
-                        </configuration>
-                    </plugin>
-                    <plugin>
+                                       <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-pmd-plugin</artifactId>
                         <version>2.5</version>
